@@ -1,0 +1,6 @@
+@evacuationApi_HostAddress = http://localhost:5272
+
+GET {{evacuationApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
