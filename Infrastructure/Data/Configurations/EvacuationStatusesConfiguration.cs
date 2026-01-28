@@ -17,11 +17,36 @@ namespace evacuation.Infrastructure.Data.Configurations
             builder.ToTable("EvacuationStatuses");
 
             builder.HasKey(x => x.Id);
-            // ,[StatusCode]
-            //,[Description]
-            //,[Sequence]
-            //,[CreateDate]
-            //,[UpdateDate]
+
+            builder.HasData(
+               new EvacuationStatus
+               {
+                   Id = Guid.Parse("4464588D-BD4F-4AD9-BA60-217B8B163E61"),
+                   StatusCode = "READY",
+                   Description = "พร้อมดำเนินการ",
+                   Sequence = 1,
+                   CreateDate = new DateTime(2026, 1, 22, 11, 52, 14),
+                   UpdateDate = null
+               },
+               new EvacuationStatus
+               {
+                   Id = Guid.Parse("423C1CCB-FCFF-44F6-A9C5-4E5BCB84F5F6"),
+                   StatusCode = "INPROGRESS",
+                   Description = "กำลังดำเนินการ",
+                   Sequence = 2,
+                   CreateDate = new DateTime(2026, 1, 22, 11, 52, 14),
+                   UpdateDate = null
+               },
+               new EvacuationStatus
+               {
+                   Id = Guid.Parse("56C51499-C1D3-411A-B7E4-37D43A6E0BDA"),
+                   StatusCode = "COMPLETED",
+                   Description = "เสร็จสิ้น",
+                   Sequence = 3,
+                   CreateDate = new DateTime(2026, 1, 22, 11, 52, 14),
+                   UpdateDate = null
+               }
+           );
         }
     }
 }
