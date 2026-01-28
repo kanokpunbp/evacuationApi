@@ -27,7 +27,7 @@ namespace evacuation.Application.Services
         {
 
             var running = await _runningCodesRepo.GetNextAsync("zone");
-            string zoneCode = $"{running.prefix}{running.CurrentValue:D3}";
+            string zoneCode = $"{running.Prefix}{running.CurrentValue:D3}";
 
             var evacuationZone = EvacuationZoneMapper.ToEntity(dto);
             evacuationZone.Id = Guid.NewGuid();

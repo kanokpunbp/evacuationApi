@@ -9,7 +9,7 @@ namespace evacuation.Domain.Entities
     public class RunningCodes
     {
         public string Name { get; set; } = null!;
-        public string prefix { get; set; } = null!;
+        public string Prefix { get; set; } = null!;
         public int CurrentValue { get; set; }
     }
 }

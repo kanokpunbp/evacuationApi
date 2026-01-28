@@ -72,7 +72,7 @@ namespace evacuation.Application.Services
                 return false;
 
             var running = await _runningCodesRepo.GetNextAsync("plan");
-            string planCode = $"{running.prefix}{running.CurrentValue:D3}";
+            string planCode = $"{running.Prefix}{running.CurrentValue:D3}";
 
             foreach (var z in evacuationZones)
             {

@@ -25,7 +25,7 @@ namespace evacuation.Application.Services
         {
 
             var running = await _runningCodesRepo.GetNextAsync("vehicle");
-            string vehicleCode = $"{running.prefix}{running.CurrentValue:D3}";
+            string vehicleCode = $"{running.Prefix}{running.CurrentValue:D3}";
 
             var vehicle = VehicleMapper.ToEntity(dto);
             vehicle.Id = Guid.NewGuid();
